@@ -35,7 +35,7 @@ render={data => (
       {
         data.products.edges.map(({ node: product }) => (
           <div className="Catalogue__item" key={product.id}>
-            <button
+            <div
               className="Product snipcart-add-item"
               data-item-id={product.id}
               data-item-price={product.price}
@@ -45,7 +45,7 @@ render={data => (
             >
               <div className="Product__image">
                 <Img sizes={product.image.sizes} />
-              </button>
+              </div>
               <div className="Product__details">
                 <div className="Product__name">
                   {product.name}
